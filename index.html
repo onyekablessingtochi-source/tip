@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tip Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h1> Tip Me</h1>
+
+  <input type="number" id="bill" placeholder="Enter Bill Amount">
+
+  <div class="buttons">
+  <button onclick="setTip(5)">5%</button>
+    <button onclick="setTip(10)">10%</button>
+    <button onclick="setTip(15)" class="active">15%</button>
+    <button onclick="setTip(20)">20%</button>
+  </div>
+
+  <div class="result">
+    <p>Tip:<span id="tip">0.00</span></p>
+    <p>Total:<span id="total">0.00</span></p>
+  </div>
+
+  <div class="extra">
+    <button onclick="clearAll()">Clear</button>
+
+    <label>
+      Round
+      <input type="checkbox" id="round" onchange="calculate()">
+    </label>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
